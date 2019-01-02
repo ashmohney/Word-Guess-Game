@@ -9,7 +9,6 @@ $(document).ready(function() {
         convert to LowerCase
     Check if letter in word:
         IS: show letter in Answer blanks --> 
-        NOT: show letter is guessed letters card and decrease number of guesses --> 
     user completes word within guees-limit
         alert "you win" --> 
     update win card ++
@@ -35,8 +34,7 @@ var gameFinish = false;         // fires off alerts
 var wins = 0;                   // win count
 
 
-// Reset vars
-function resetGame() {
+function startGame() {
     remainingGuesses = maxGuesses;
 
     //finding indices
@@ -46,9 +44,9 @@ function resetGame() {
     guessedLetters = [];
     guessingWord = [];
 
-    // word guess and ____
-    for (var i = 0; i < wordChoice[wordPick].length; i++) {
-        guessingWord.push("_");
+    // word guess and _ _ _ _
+    for(var i = 0; i < wordChoice[wordPick].length; i++) {
+        guessingWord.push("_"); 
     }
 
     updateDisplay(); 
@@ -124,7 +122,7 @@ function makeGuess(letter) {
 document.onkeyup = function(event) {
 
     if(gameFinish) {
-        resetGame();
+        startGame();
         gameFinish = false;
     } else {
         
