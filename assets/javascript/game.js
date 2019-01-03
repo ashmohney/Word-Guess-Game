@@ -1,6 +1,5 @@
 $(document).ready(function() {
     console.log( "ready!" );
-
     /*  
     user presses any key
     user presented with Word blanks and 10 guesses
@@ -51,7 +50,7 @@ function startGame() {
 
     updateDisplay(); 
 };
-
+startGame();
 
 function updateDisplay() {
     

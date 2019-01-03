@@ -1,3 +1,8 @@
 body {
     background-color: lightgray;
 }
+
+#jb1 {
+    background-image: url("../images/tropFruit-jumbo.jpeg");
+    background-size: 100%;
+  }
